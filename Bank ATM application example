@@ -1,0 +1,41 @@
+package sessions;
+// The below program is an example of encapsulation which is a combination of data hiding and data abstraction
+class Account{
+	private double balance;
+	/*Let us imagine a Graphical user interface which has two options
+	 * Option 1 is to update the account balance
+	 * Option 2 is to view the account balance
+	   When the user selects the appropriate option, 
+	   the corresponding method is being called automatically even though the user 
+	   is not aware of what is happening from the back end.
+	  This is the vary basic concept of data abstraction.
+	  Also, when we declare the variable private, it can be accessed only within the particular class or within the particular method
+	  This ensures the principle of data hiding
+	  Thus combined together, we get the concept of encapsulation.
+	 
+	 
+	 */
+	public void setBalance(double balance)
+	{
+		//user validation
+		this.balance= balance;
+	}
+	public double getBalance()
+	{
+		//user validation
+		return balance;
+	}
+	
+	
+}
+public class bankatm {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Account obj1 = new Account();
+		obj1.setBalance(1500);
+		System.out.println("The entered balance is "+obj1.getBalance());
+
+	}
+
+}
